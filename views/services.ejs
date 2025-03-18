@@ -1,0 +1,99 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark">
+    <div class="row">
+        <div class="col-sm-2">
+            <%- include('./partials/sidebar.ejs',{page_name:"services"}) %>
+        </div>
+
+        <div class="col-sm-10">
+            <!-- Main Content Section for Services -->
+            <div class="container text-white py-5">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-5">
+                        <h1 class="display-4 mb-4 heading">My Services</h1>
+                        <p class="lead mb-3 subheading">What I Can Do For You</p>
+                    </div>
+                </div>
+
+                <!-- Services List -->
+                <div class="row">
+
+                    <!-- Freelancing Section -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-box text-center p-4">
+                            <i class="fas fa-laptop-code fa-4x text-teal service-icon"></i>
+                            <h3 class="mt-3">Freelancing</h3>
+                            <p class="service-description">
+                                Offering web development services for dynamic, responsive websites using modern technologies like React, Node.js, and Tailwind CSS.
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar bg-teal" style="width: 100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Collaboration Section -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-box text-center p-4">
+                            <i class="fas fa-users fa-4x text-blue service-icon"></i>
+                            <h3 class="mt-3">Team Collaboration</h3>
+                            <p class="service-description">
+                                Collaborating with teams to build scalable and maintainable web applications, focusing on Agile methodologies and version control.
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar bg-blue" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full-stack Development Section -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-box text-center p-4">
+                            <i class="fas fa-cogs fa-4x text-purple service-icon"></i>
+                            <h3 class="mt-3">Full-Stack Development</h3>
+                            <p class="service-description">
+                                Offering both frontend and backend development services, from building intuitive UIs with React to developing REST APIs with Node.js and Express.
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar bg-purple" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="service-box text-center p-4">
+                            <i class="fas fa-search fa-4x text-yellow service-icon"></i>
+                            <h3 class="mt-3">SEO Optimization</h3>
+                            <p class="service-description">
+                                Enhancing website performance and visibility with SEO best practices, including keyword research, on-page optimization, and technical SEO.
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar bg-yellow" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="service-box text-center p-4">
+                            <i class="fas fa-check-circle fa-4x text-green service-icon"></i>
+                            <h3 class="mt-3">Testing & Quality Assurance</h3>
+                            <p class="service-description">
+                                Ensuring the quality of your product with manual  testing practices, covering functional ,  performance  and security testing.
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar bg-green" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,139 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark">
+  <div class="row">
+
+    <!-- Sidebar Section -->
+    <div class="col-md-3 col-lg-2">
+      <%- include('./partials/sidebar.ejs', { page_name: "Home" }) %>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="col-md-9 col-lg-10">
+      <div class="container text-white py-5">
+
+        <!-- Hero Section -->
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h1 class="display-4 mb-4 heading">Hello, I'm Annu Mudgal</h1>
+            <p class="lead mb-3 subheading">Aspiring Software Engineer | Passionate Web Developer | Problem Solver</p>
+            <p class="intro-text">
+              With a strong focus on creating user-centric, scalable, and impactful web solutions, I thrive in fast-paced, problem-solving environments. I design clean and modern user interfaces that are both aesthetically pleasing and functionally efficient. Let's turn ideas into reality with code.
+            </p>
+            <p class="lead mb-4">
+              I'm a <span id="dynamic-text">Freelancer</span> <!-- This is the dynamic text -->
+            </p>
+            <div class="social-links">
+              <a href="mailto:Akshitmudgal001@gmail.com" class="btn btn-light social-icon"><i class="fas fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/annumudgal001/" class="btn btn-light social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/akshitmudgal001" class="btn btn-light social-icon"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com/annumudgal001" class="btn btn-light social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/akshit_mudgal/" class="btn btn-light social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills & Expertise Section -->
+        <div class="row mt-5">
+          <div class="col-md-4 mb-4">
+            <h3 class="highlight-title">Core Skills</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> HTML5</li>
+              <li><i class="fas fa-check-circle"></i> CSS3 / SCSS</li>
+              <li><i class="fas fa-check-circle"></i> JavaScript (ES6+)</li>
+              <li><i class="fas fa-check-circle"></i> React & Redux</li>
+              <li><i class="fas fa-check-circle"></i> Node.js & Express</li>
+              <li><i class="fas fa-check-circle"></i> Python & C++</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h3 class="highlight-title">Notable Tools</h3>
+            <ul>
+              <li><i class="fab fa-git"></i> Git & GitHub</li>
+              <li><i class="fab fa-npm"></i> NPM</li>
+              <li><i class="fas fa-database"></i> MongoDB</li>
+              <li><i class="fab fa-docker"></i> Docker</li>
+              <li><i class="fab fa-aws"></i> AWS</li>
+              <li><i class="fab fa-linux"></i> Linux</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h3 class="highlight-title">My Services</h3>
+            <ul>
+              <li><i class="fas fa-briefcase"></i> Web Development</li>
+              <li><i class="fas fa-mobile-alt"></i> Mobile App Development</li>
+              <li><i class="fas fa-cogs"></i> DevOps & CI/CD</li>
+              <li><i class="fas fa-cloud"></i> Cloud Integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Featured Projects Section -->
+        <div class="row" id="projects">
+          <div class="col-md-12">
+            <h2 class="section-title text-center mb-4">Featured Projects</h2>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="project-card">
+              <i class="fas fa-palette project-icon"></i> <!-- Font Awesome Icon -->
+              <div class="project-info">
+                <h5>Quickart</h5>
+                <ul class="project-details">
+                  <li><strong>Project:</strong> E-commerce platform for digital art</li>
+                  <li><strong>Stack:</strong> React, Node.js, MongoDB</li>
+                  <li><strong>Features:</strong> User account management, Art submission and marketplace, Admin panel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="project-card">
+              <i class="fas fa-laptop-code project-icon"></i> <!-- Font Awesome Icon -->
+              <div class="project-info">
+                <h5>Current Portfolio</h5>
+                <ul class="project-details">
+                  <li><strong>Project:</strong> Personal Portfolio</li>
+                  <li><strong>Stack:</strong> HTML, CSS, JavaScript</li>
+                  <li><strong>Features:</strong> Showcase of work, Resume download, Contact form</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="project-card">
+              <i class="fas fa-robot project-icon"></i> <!-- Font Awesome Icon -->
+              <div class="project-info">
+                <h5>Nova Smart Assistant</h5>
+                <ul class="project-details">
+                  <li><strong>Project:</strong> AI-powered assistant</li>
+                  <li><strong>Stack:</strong> Python, Django, TensorFlow</li>
+                  <li><strong>Features:</strong> Voice recognition, Natural language processing, Serverless deployment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <h2 class="section-title text-center mb-4">What Others Are Saying</h2>
+            <div class="testimonials">
+              <div class="testimonial-item">
+                <p>"Annu is an excellent learner developer! His ability to turn complex requirements into simple, elegant solutions is unmatched."</p>
+                <p><strong>- Annu's Reporting Manager at Current Company</strong></p>
+              </div>
+              <div class="testimonial-item">
+                <p>"Guiding Annu was a great experience during his ML/AI internship. His attention to detail, learning new skills, and commitment to quality helped us get a top-notch product."</p>
+                <p><strong>- Project Checker at KRMU, Gurugram</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
