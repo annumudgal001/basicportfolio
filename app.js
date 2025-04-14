@@ -17,7 +17,7 @@ app.use('/', webRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error(err.stack); 
   res.status(500).render('error', { title: 'Error' });
 });
 
