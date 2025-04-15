@@ -1,44 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Dynamic Text Changing (e.g., Freelancer, Developer, etc.)
-    let dynamicTextElement = document.getElementById("dynamic-text");
-
+    // Dynamic Text Changing
+    const dynamicTextElement = document.getElementById('dynamic-text');
     if (dynamicTextElement) {
-        let words = ["Freelancer", "Developer", "Student", "Learner", "Problem Solver"];
+        const words = ['Freelancer', 'Developer', 'Student', 'Learner', 'Problem Solver'];
         let i = 0;
-
-        setInterval(function() {
+        setInterval(() => {
             dynamicTextElement.textContent = words[i];
-            i = (i + 1) % words.length; // Loop through words array
-        }, 3000); // Change every 3 seconds
+            i = (i + 1) % words.length;
+        }, 3000);
     }
 
-    // Fade-in animation for the main heading (Hello, I'm Annu Mudgal)
-    let heading = document.querySelector(".heading");
-    if (heading) {
-        heading.classList.add("fade-in-up");
-    }
-
-    // Optional: Mobile Sidebar toggle functionality
-    let sidebar = document.querySelector('.sidebar');
-    let menuToggle = document.querySelector('.menu-toggle');
-    let closeBtn = document.querySelector('.close-btn');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            sidebar.classList.add('open');
+    // Mobile Sidebar Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    if (menuToggle && navContainer) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navContainer.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
         });
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            sidebar.classList.remove('open');
+    // Profile Image Zoom
+    const profileImage = document.getElementById('profile-image');
+    const zoomOverlay = document.getElementById('image-zoom-overlay');
+    if (profileImage && zoomOverlay) {
+        profileImage.addEventListener('click', () => {
+            const img = zoomOverlay.querySelector('.zoomed-image');
+            img.src = '/images/IMG_2694.png';
+            img.onerror = () => {
+                console.error('Failed to load zoom image: /images/IMG_2694.png');
+                img.src = '/images/fallback.png'; // Optional fallback
+            };
+            img.onload = () => {
+                zoomOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
         });
+        zoomOverlay.addEventListener('click', (e) => {
+            if (e.target === zoomOverlay || e.target.classList.contains('zoomed-image')) {
+                zoomOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && zoomOverlay.classList.contains('active')) {
+                zoomOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    } else {
+        console.warn('Profile image or zoom overlay not found');
     }
 
-    // Optional: Scroll to top functionality when the button is clicked (if you have such a button)
-    let scrollToTopButton = document.getElementById('scroll-to-top-btn');
+    // Scroll-to-Top Button
+    const scrollToTopButton = document.getElementById('scroll-to-top-btn');
     if (scrollToTopButton) {
-        scrollToTopButton.addEventListener('click', function() {
+        window.addEventListener('scroll', () => {
+            scrollToTopButton.classList.toggle('visible', window.scrollY > 300);
+        });
+        scrollToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -46,14 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Optional: Apply a smooth scrolling effect for anchor links
-    let anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(function(anchorLink) {
+    // Smooth Scrolling for Anchor Links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(anchorLink => {
         anchorLink.addEventListener('click', function(event) {
             event.preventDefault();
-            let targetId = this.getAttribute('href').substring(1);
-            let targetElement = document.getElementById(targetId);
-
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop,
@@ -62,4 +84,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+// Dynamic Text Rotation
+const dynamicText = document.getElementById('dynamic-text');
+const roles = ['Developer', 'Engineer', 'Innovator', 'Problem Solver'];
+let roleIndex = 0;
+
+function rotateText() {
+  dynamicText.style.opacity = 0;
+  setTimeout(() => {
+    dynamicText.textContent = roles[roleIndex];
+    dynamicText.style.opacity = 1;
+    roleIndex = (roleIndex + 1) % roles.length;
+  }, 300);
+}
+
+setInterval(rotateText, 3000);
+rotateText();
+
+// Scroll-to-Top Button
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

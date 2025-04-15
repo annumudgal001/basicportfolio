@@ -1,22 +1,27 @@
 <div class="sidebar-container">
+  <div class="sidebar-wrapper">
     <div class="sidebar">
-        <div class="text-center">
-            <img src="/images/pic1.jpg" alt="Akshit Mudgal" class="img-fluid mt-5 rounded-circle profile-image">
-            <h3 class="text-white mt-3 st-font profile-name">Akshit Mudgal</h3>
-        </div>
-        <nav class="nav flex-column text-center mt-4">
-            <a href="/" class="nav-link <% if(page_name == 'Home') { %> active <% } %>">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="/services" class="nav-link <% if(page_name == 'services') { %> active <% } %>">
-                <i class="fas fa-briefcase"></i> Services
-            </a>
-            <a href="/skills" class="nav-link <% if(page_name == 'skills') { %> active <% } %>">
-                <i class="fas fa-cogs"></i> Skills
-            </a>
-            <a href="/contact" class="nav-link <% if(page_name == 'contact') { %> active <% } %>">
-                <i class="fas fa-envelope"></i> Contact
-            </a>
+      <div class="text-center">
+        <img src="/images/IMG_2694.png" alt="Annu Mudgal Profile Picture" id="profile-image" class="img-fluid mt-4 rounded-circle profile-image">
+        <h3 class="text-white mt-3 st-font profile-name">Annu Mudgal</h3>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-container">
+        <nav class="nav flex-column text-center mt-3">
+          <a href="/" class="nav-link <% if(page_name === 'Home') { %> active <% } %>"><i class="fas fa-home"></i> Home</a>
+          <a href="/services" class="nav-link <% if(page_name === 'services') { %> active <% } %>"><i class="fas fa-briefcase"></i> Services</a>
+          <a href="/skills" class="nav-link <% if(page_name === 'skills') { %> active <% } %>"><i class="fas fa-cogs"></i> Skills</a>
+          <a href="/contact" class="nav-link <% if(page_name === 'contact') { %> active <% } %>"><i class="fas fa-envelope"></i> Contact</a>
+          <a href="/assets/Annu_Resume.pdf" target="_blank" class="resume-btn"><i class="fas fa-file-alt"></i> View Resume</a>
         </nav>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- Zoom Overlay -->
+<div id="image-zoom-overlay" class="image-zoom-overlay" role="dialog" aria-label="Zoomed profile image">
+  <img src="/images/IMG_2694.png" alt="Annu Mudgal Profile Picture" class="zoomed-image">
 </div>

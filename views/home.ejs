@@ -3,132 +3,286 @@
 <div class="container-fluid bg-dark">
   <div class="row">
     <!-- Sidebar Section -->
-    <div class="col-md-3 col-lg-2">
+    <div class="col-lg-3 col-md-4">
       <%- include('./partials/sidebar.ejs', { page_name: "Home" }) %>
     </div>
     <!-- Main Content Section -->
-    <div class="col-md-9 col-lg-10">
-      <div class="container text-white py-5">
-
+    <div class="col-lg-9 col-md-8 main-content">
+      <div class="container text-white py-3">
         <!-- Hero Section -->
-        <div class="row text-center">
-          <div class="col-md-12">
-            <h1 class="display-4 mb-4 heading">Hello, I'm Annu Mudgal</h1>
-            <p class="lead mb-3 subheading">Aspiring Software Engineer | Passionate Web Developer | Problem Solver</p>
-            <p class="intro-text">
-              With a strong focus on creating user-centric, scalable, and impactful web solutions, I thrive in fast-paced, problem-solving environments. I design clean and modern user interfaces that are both aesthetically pleasing and functionally efficient. Let's turn ideas into reality with code.
-            </p>
-            <p class="lead mb-4">
-              I'm a <span id="dynamic-text">Freelancer</span> <!-- This is the dynamic text -->
-            </p>
-            <div class="social-links">
-              <a href="mailto:Akshitmudgal001@gmail.com" class="btn btn-light social-icon"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/annumudgal001/" class="btn btn-light social-icon"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://github.com/annumudgal001" class="btn btn-light social-icon"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com/annumudgal001" class="btn btn-light social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/akshit_mudgal_/" class="btn btn-light social-icon"><i class="fab fa-instagram"></i></a>
+        <section class="hero-section">
+          <div class="row text-center">
+            <div class="col-12">
+              <h1 class="display-4 mb-4 heading">Hello, I'm Annu Mudgal</h1>
+              <p class="lead mb-3 subheading">Software Engineer | Web Developer | Innovator</p>
+              <p class="intro-text">
+                I engineer scalable, user-centric web solutions with robust code and cutting-edge technologies. Let’s drive impactful innovation.
+              </p>
+              <p class="lead mb-4">
+                I'm a <span id="dynamic-text">Developer</span>
+              </p>
+              <div class="social-links">
+                <a href="mailto:Akshitmudgal001@gmail.com" class="btn btn-light social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/annumudgal001/" target="_blank" class="btn btn-light social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/annumudgal001" target="_blank" class="btn btn-light social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/annumudgal001" target="_blank" class="btn btn-light social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/akshit_mudgal_/" target="_blank" class="btn btn-light social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Experience Section (Timeline) -->
+        <section class="experience-section py-3">
+          <h2 class="section-title text-center mb-4">Experience</h2>
+          <div class="timeline-container">
+            <div class="timeline-node timeline-left">
+              <div class="timeline-content">
+                <img src="/images/Byld.png" alt="Byld Group Logo" class="company-logo">
+                <h5>Apprentice Web Developer (MERN)</h5>
+                <p class="text-warning"><strong>Jan 2025 – Present</strong><br>  Byld Group, Gurugram</p>
+                <p><strong>Industry:</strong> Software Development</p>
+                <p>Streamlining scalable MERN stack applications, delivering client-focused solutions with optimized APIs.</p>
+              </div>
+            </div>
+            <div class="timeline-node timeline-right">
+              <div class="timeline-content">
+                <img src="/images/KRMU.jpg" alt="KRMU Logo" class="company-logo">
+                <h5>AI/ML Intern</h5>
+                <p class="text-warning"><strong>July 2024 – Aug 2024</strong> <br> K.R. Mangalam University, Gurugram</p>
+                <p><strong>Industry:</strong> AI/ML</p>
+                <p>Engineered innovative ML models with Python and TensorFlow, advancing research-driven AI solutions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education Section (Timeline) -->
+        <section class="education-section py-3">
+          <h2 class="section-title text-center mb-4">Education</h2>
+          <div class="timeline-container">
+            <div class="timeline-node timeline-left">
+              <div class="timeline-content">
+                <img src="/images/KRMU.jpg" alt="KRMU Gurugram Logo" class="company-logo">
+                <h5>Master of Computer Applications</h5>
+                <p class="text-warning"><strong>2023 – Present (Exp. 2025)</strong> <br> KRMU, Gurugram</p>
+                <p><strong>Score:</strong> 8.20 CGPA (Till Now)</p>
+                <p><strong>Coursework:</strong> Scalable Web Architectures, AI-Driven Solutions, Cloud Computing</p>
+                <p>Mastering advanced full-stack and AI technologies for impactful software solutions.</p>
+              </div>
+            </div>
+            <div class="timeline-node timeline-right">
+              <div class="timeline-content">
+                <img src="/images/MDU.jpg" alt="MDU Rohtak Logo" class="company-logo">
+                <h5>Bachelor of Computer Applications</h5>
+                <p class="text-warning"><strong>2020 – Aug 2023</strong> <br> MDU, Rohtak</p>
+                <p><strong>Score:</strong> 70% (~7.0 CGPA)</p>
+                <p><strong>Coursework:</strong> Modern Web Technologies, Data Optimization</p>
+                <p>Developed a robust foundation in programming and web development.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Skills & Expertise Section -->
-        <div class="row mt-5">
-          <div class="col-md-4 mb-4">
-            <h3 class="highlight-title">Core Skills</h3>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> HTML5</li>
-              <li><i class="fas fa-check-circle"></i> CSS3 / SCSS</li>
-              <li><i class="fas fa-check-circle"></i> JavaScript (ES6+)</li>
-              <li><i class="fas fa-check-circle"></i> React & Redux</li>
-              <li><i class="fas fa-check-circle"></i> Node.js & Express</li>
-              <li><i class="fas fa-check-circle"></i> Python & C++</li>
-            </ul>
+        <section class="section py-3">
+          <div class="row">
+            <div class="col-md-4 mb-2">
+              <h3 class="highlight-title">Core Skills</h3>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle me-2"></i> HTML5</li>
+                <li><i class="fas fa-check-circle me-2"></i> CSS3 / SCSS</li>
+                <li><i class="fas fa-check-circle me-2"></i> JavaScript (ES6+)</li>
+                <li><i class="fas fa-check-circle me-2"></i> React & Redux</li>
+                <li><i class="fas fa-check-circle me-2"></i> Node.js & Express</li>
+                <li><i class="fas fa-check-circle me-2"></i> Python & C++</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-2">
+              <h3 class="highlight-title">Notable Tools</h3>
+              <ul class="list-unstyled">
+                <li><i class="fab fa-git me-2"></i> Git & GitHub</li>
+                <li><i class="fab fa-npm me-2"></i> NPM</li>
+                <li><i class="fas fa-database me-2"></i> MongoDB</li>
+                <li><i class="fab fa-linux me-2"></i> Linux</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-2">
+              <h3 class="highlight-title">My Services</h3>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-briefcase me-2"></i> Web Development</li>
+                <li><i class="fas fa-cogs me-2"></i> DevOps & CI/CD Basics</li>
+                <li><i class="fas fa-cloud me-2"></i> Cloud Integration</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <h3 class="highlight-title">Notable Tools</h3>
-            <ul>
-              <li><i class="fab fa-git"></i> Git & GitHub</li>
-              <li><i class="fab fa-npm"></i> NPM</li>
-              <li><i class="fas fa-database"></i> MongoDB</li>
-              <!-- <li><i class="fab fa-docker"></i> Docker</li>
-              <li><i class="fab fa-aws"></i> AWS</li> -->
-              <li><i class="fab fa-linux"></i> Linux</li>
-            </ul>
-          </div>
-          <div class="col-md-4 mb-4">
-            <h3 class="highlight-title">My Services</h3>
-            <ul>
-              <li><i class="fas fa-briefcase"></i> Web Development</li>
-              <!-- <li><i class="fas fa-mobile-alt"></i> Mobile App Development</li> -->
-              <li><i class="fas fa-cogs"></i> DevOps & CI/CD Basics</li>
-              <li><i class="fas fa-cloud"></i> Cloud Integration</li>
-            </ul>
-          </div>
-        </div>
+        </section>
 
         <!-- Featured Projects Section -->
-        <div class="row" id="projects">
-          <div class="col-md-12">
-            <h2 class="section-title text-center mb-4">Featured Projects</h2>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="project-card">
-              <i class="fas fa-palette project-icon"></i> <!-- Font Awesome Icon -->
-              <div class="project-info">
-                <h5>Quickart</h5>
-                <ul class="project-details">
-                  <li><strong>Project:</strong> E-commerce platform for digital art</li>
-                  <li><strong>Stack:</strong> React, Node.js, MongoDB</li>
-                  <li><strong>Features:</strong> User account management, Art submission and marketplace, Admin panel</li>
-                </ul>
+        <section class="section py-3" id="projects">
+          <h2 class="section-title text-center mb-4">Featured Projects</h2>
+          <div class="row">
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=60" alt="Basic Portfolio Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>Basic Portfolio</h5>
+                  <p>Responsive portfolio using HTML, CSS, JS.</p>
+                  <div class="project-buttons">
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">Live Demo</a>
+                    <a href="https://github.com/annumudgal001/basicportfolio" target="_blank" class="btn btn-outline-light btn-sm">View Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://raw.githubusercontent.com/annumudgal001/LiveTrack/refs/heads/master/public/images/map.png" alt="LiveTrack Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>LiveTrack</h5>
+                  <p>Real-time tracking app with Node.js, WebSocket.</p>
+                  <div class="project-buttons">
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">Live Demo</a>
+                    <a href="https://github.com/annumudgal001/LiveTrack" target="_blank" class="btn btn-outline-light btn-sm">View Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=500" alt="BlogAPI Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>BlogAPI</h5>
+                  <p>RESTful API using Node.js, Express, MongoDB.</p>
+                  <div class="project-buttons">
+                    <a href="https://annu-blogapi.onrender.com/" target="_blank" class="btn btn-outline-light btn-sm">Live Demo</a>
+                    <a href="https://github.com/annumudgal001/BlogAPI" target="_blank" class="btn btn-outline-light btn-sm">View Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=60" alt="Project One Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>Project One</h5>
+                  <p>Dynamic web app prototype.</p>
+                  <div class="project-buttons">
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">Live Demo</a>
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">View Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Project Two Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>Project Two</h5>
+                  <p>Modern UI/UX design solution.</p>
+                  <div class="project-buttons">
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">Live Demo</a>
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">View Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-b1b0512a7a76?auto=format&fit=crop&w=500&q=60" alt="Project Three Thumbnail" class="project-thumbnail img-fluid">
+                <div class="project-info p-2">
+                  <h5>Project Three</h5>
+                  <p>Backend-focused microservice.</p>
+                  <div class="project-buttons">
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">Live Demo</a>
+                    <a href="#" class="btn btn-outline-light btn-sm disabled" aria-disabled="true">View Code</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="project-card">
-              <i class="fas fa-laptop-code project-icon"></i> <!-- Font Awesome Icon -->
-              <div class="project-info">
-                <h5>Current Portfolio</h5>
-                <ul class="project-details">
-                  <li><strong>Project:</strong> Personal Portfolio</li>
-                  <li><strong>Stack:</strong> HTML, CSS, JavaScript</li>
-                  <li><strong>Features:</strong> Showcase of work, Resume download, Contact form</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="project-card">
-              <i class="fas fa-robot project-icon"></i> <!-- Font Awesome Icon -->
-              <div class="project-info">
-                <h5>Nova Smart Assistant</h5>
-                <ul class="project-details">
-                  <li><strong>Project:</strong> AI-powered assistant</li>
-                  <li><strong>Stack:</strong> Python, Django, TensorFlow</li>
-                  <li><strong>Features:</strong> Voice recognition, Natural language processing, Serverless deployment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- Testimonials Section -->
-        <div class="row mt-5">
-          <div class="col-md-12">
-            <h2 class="section-title text-center mb-4">What Others Are Saying</h2>
-            <div class="testimonials">
-              <div class="testimonial-item">
-                <p>"Annu is an excellent learner developer! His ability to turn complex requirements into simple, elegant solutions is unmatched."</p>
-                <p><strong>- Annu's Reporting Manager at Current Company</strong></p>
-              </div>
-              <div class="testimonial-item">
-                <p>"Guiding Annu was a great experience during his ML/AI internship. His attention to detail, learning new skills, and commitment to quality helped us get a top-notch product."</p>
-                <p><strong>- Project Checker at KRMU, Gurugram</strong></p>
-              </div>
-            </div>
-          </div>
+        <!-- Certifications Section -->
+<section class="certifications-section py-3">
+  <h2 class="section-title text-center mb-4">Certifications</h2>
+  <div class="row">
+    <div class="col-md-3 mb-2">
+      <div class="certification-card">
+        <img src="/images/certificate.png" alt="Web Development Mastery" class="cert-image">
+        <div class="project-info p-2">
+          <h5>Web Development Mastery</h5>
+          <p class="text-warning"><strong>Issuer:</strong> Coursera</p>
+          <p><strong>Industry:</strong> Web Development</p>
+          <p><strong>Status:</strong> In Progress</p>
+          <a href="/images/certificate.png" target="_blank" class="btn btn-outline-light btn-sm">Show Credential</a>
         </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-2">
+      <div class="certification-card">
+        <img src="/images/certificate.png" alt="AI Fundamentals" class="cert-image">
+        <div class="project-info p-2">
+          <h5>AI Fundamentals</h5>
+          <p class="text-warning"><strong>Issuer:</strong> Udemy</p>
+          <p><strong>Industry:</strong> Artificial Intelligence</p>
+          <p><strong>Status:</strong> Planned</p>
+          <a href="/images/certificate.png" target="_blank" class="btn btn-outline-light btn-sm">Show Credential</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-2">
+      <div class="certification-card">
+        <img src="/images/certificate.png" alt="Cloud Essentials" class="cert-image">
+        <div class="project-info p-2">
+          <h5>Cloud Essentials</h5>
+          <p class="text-warning"><strong>Issuer:</strong> AWS</p>
+          <p><strong>Industry:</strong> Cloud Computing</p>
+          <p><strong>Status:</strong> Planned</p>
+          <a href="/images/certificate.png" target="_blank" class="btn btn-outline-light btn-sm">Show Credential</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-2">
+      <div class="certification-card">
+        <img src="/images/certificate.png" alt="Data Science Basics" class="cert-image">
+        <div class="project-info p-2">
+          <h5>Data Science Basics</h5>
+          <p class="text-warning"><strong>Issuer:</strong> edX</p>
+          <p><strong>Industry:</strong> Data Science</p>
+          <p><strong>Status:</strong> Planned</p>
+          <a href="/images/certificate.png" target="_blank" class="btn btn-outline-light btn-sm">Show Credential</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
 
+<!-- Testimonials Section -->
+<section class="section py-3">
+  <h2 class="section-title text-center mb-4">Testimonials</h2>
+  <div class="testimonials">
+    <div class="testimonial-item" style="animation-delay: 0.1s;">
+      <img src="/images/avatar.png" alt="Avatar Icon" class="testimonial-avatar">
+      <p><i class="fas fa-quote-left me-2"></i>Annu’s expertise in MERN development at Byld Group is exceptional. He streamlines workflows, delivering scalable, high-quality solutions.<i class="fas fa-quote-right ms-2"></i></p>
+      <p><strong>Asheesh Kumar</strong> | Reporting Manager, Byld Group</p>
+    </div>
+    <div class="testimonial-item" style="animation-delay: 0.2s;">
+      <img src="/images/avatar.png" alt="Avatar Icon" class="testimonial-avatar">
+      <p><i class="fas fa-quote-left me-2"></i>Annu demonstrated technical excellence during his AI/ML internship at KRMU, contributing innovative models to our research.<i class="fas fa-quote-right ms-2"></i></p>
+      <p><strong>Rupesh Kumar Tipu</strong> | Research Faculty, KRMU</p>
+    </div>
+    <div class="testimonial-item" style="animation-delay: 0.3s;">
+      <img src="/images/avatar.png" alt="Avatar Icon" class="testimonial-avatar">
+      <p><i class="fas fa-quote-left me-2"></i>Annu’s rapid learning and advanced skills shone in Hack KRMU 2.0. His Python-powered virtual assistant secured us a top 50 spot.<i class="fas fa-quote-right ms-2"></i></p>
+      <p><strong>Keshav Sharma</strong> | Colleague & Hackathon Teammate</p>
+    </div>
+  </div>
+  <div class="visitor-greeting text-center mt-4">
+    <p>Thank you for exploring my portfolio! I’m passionate about crafting innovative solutions and eager to collaborate on transformative projects. Let’s connect!</p>
+  </div>
+</section>
       </div>
     </div>
   </div>
