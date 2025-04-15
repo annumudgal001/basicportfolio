@@ -112,6 +112,19 @@ window.addEventListener('scroll', () => {
     scrollToTopBtn.classList.remove('visible');
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const certCards = document.querySelectorAll('.certification-card');
+  
+    certCards.forEach(card => {
+      const overlay = card.querySelector('.cert-overlay');
+      card.addEventListener('mouseenter', () => {
+        overlay.style.opacity = '1';
+      });
+      card.addEventListener('mouseleave', () => {
+        overlay.style.opacity = '0';
+      });
+    });
+  });
 
 scrollToTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
