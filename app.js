@@ -3,7 +3,7 @@ dotenv.config();
 
 import express from 'express';
 import { connectDB} from './config/connectdb.js';
-import router  from './Routes/web.js';
+import router  from './routes/web.js';
 import path from 'path';
 import session from 'express-session'; 
 import flash from 'connect-flash'; 
