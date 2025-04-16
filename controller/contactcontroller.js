@@ -13,7 +13,7 @@ const saveusercontroller = async (req, res) => {
     
     const html = `
     <div style="
-        background-image: url('/images/bg.png'), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
+        background-image: url('/images/final bg (1).png'), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
         background-size: cover;
         background-position: center;
         background-color: #333;
@@ -36,7 +36,7 @@ const saveusercontroller = async (req, res) => {
     `;
     const toadminhtml = `
     <div style="
-        background-image: url('/images/bg.png'), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
+        background-image: url('/images/final bg (1).png'), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
         background-size: cover;
         background-position: center;
         background-color: #333;
