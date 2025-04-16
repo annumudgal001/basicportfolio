@@ -535,8 +535,9 @@ ul.list-unstyled li i {
 .glass-form-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 form .form-group {
@@ -1314,4 +1315,14 @@ footer {
   .visitor-greeting p {
     font-size: 0.9rem;
   }
+}
+/* In style.css */
+iframe {
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* In style.css */
+.info-item a:hover {
+  color: #fff;
+  text-decoration: underline;
 }

@@ -1,6 +1,9 @@
 import dotenv from 'dotenv';
+dotenv.config();
+
+
 import express from 'express';
-import webRouter from './routes/web.js';
+import webRouter from './routes/web.js'; 
 import mongoose from 'mongoose';
 import connectDB from './config/connectdb.js';
 dotenv.config();
@@ -26,5 +29,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running: http://localhost:${PORT}`);
+  console.log(`Server running: http://localhost:${PORT} `);
 });
