@@ -52,6 +52,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="glass-form-container p-4">
+                            <% if (success_msg && success_msg.length > 0) { %>
+                                <div class="alert alert-success custom-alert fade show text-center" role="alert">
+                                    <i class="fas fa-check-circle me-2"></i><%= success_msg %>
+                                    <button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <% } %>
+                            <% if (error_msg && error_msg.length > 0) { %>
+                                <div class="alert alert-danger custom-alert fade show text-center" role="alert">
+                                    <i class="fas fa-exclamation-circle me-2"></i><%= error_msg %>
+                                    <button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <% } %>
                             <form action="/submit-contact" method="POST">
                                 <div class="form-group mb-4">
                                     <label for="name" class="text-light">

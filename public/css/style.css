@@ -1326,3 +1326,58 @@ iframe {
   color: #fff;
   text-decoration: underline;
 }
+/* public/css/style.css */
+.alert-success, .alert-danger {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+.alert-success {
+  border-color: #388e3c;
+}
+.alert-danger {
+  border-color: #d32f2f;
+}
+/* Utilities */
+.custom-alert {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.alert-success.custom-alert {
+  background: rgba(40, 167, 69, 0.2); /* Green with transparency */
+  border-color: rgba(40, 167, 69, 0.5);
+  color: #d4edda; /* Light green text */
+}
+
+.alert-danger.custom-alert {
+  background: rgba(220, 53, 69, 0.2); /* Red with transparency */
+  border-color: rgba(220, 53, 69, 0.5);
+  color: #f8d7da; /* Light red text */
+}
+
+.custom-alert .btn-close.custom-close {
+  filter: invert(1);
+  opacity: 0.8;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+
+.custom-alert .btn-close.custom-close:hover {
+  opacity: 1;
+}

@@ -1,0 +1,41 @@
+<%- include('./partials/header.ejs') %>
+<div class="container-fluid bg-dark">
+    <div class="row">
+        <div class="col-sm-2">
+            <%- include('./partials/sidebar.ejs', {page_name: "error"}) %>
+        </div>
+        <div class="col-sm-10">
+            <div class="container text-white py-5">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-5">
+                        <h1 class="display-4 mb-4 heading">Oops! Something Went Wrong</h1>
+                        <p class="lead mb-3">We encountered an issue. Please try again later.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="glass-form-container p-4">
+                            <% if (error_msg && error_msg.length > 0) { %>
+                                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                                    <%= error_msg %>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <% } %>
+                            <% if (error) { %>
+                                <div class="alert alert-danger text-center">
+                                    Error: <%= error.message || 'An unexpected error occurred' %>
+                                </div>
+                            <% } %>
+                            <div class="text-center">
+                                <a href="/" class="btn btn-outline-light btn-lg px-4 py-2">
+                                    <i class="fas fa-home"></i> Back to Home
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>
